@@ -80,6 +80,12 @@
         <property name="name" value="Fedor Petrov" />
     </bean>
 
+    <context:annotation-config />
+    <bean class="com.learn.spring.initDestroy.InitializationDisposableBean"
+            init-method="myInit"
+            destroy-method="myDestroy"
+    />
+
 </beans>
 
 

@@ -40,6 +40,18 @@ public class Main {
 
         Worker implRussianWorker = ctx.getBean("implRussianWorker", Worker.class);
         System.out.println(implRussianWorker); //Worker(id=444, name=Fedor Petrov, country=Russia)
+
+        ctx.close();
+
+        // InitializationDisposableBean lifecycle methods:
+        // >>> Initialization
+        // 1. Annotated @PostConstruct Method
+        // 2. InitializingBean's afterPropertiesSet method
+        // 3. XML declared init method
+        // >>> Destruction
+        // 1. Annotated @PreDestroy Method
+        // 2. DisposableBean's bean afterPropertiesSet method
+        // 3. XML declared destroy method
     }
 
 }
