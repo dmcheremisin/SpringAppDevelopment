@@ -30,6 +30,30 @@
         <constructor-arg value="true"/>
     </bean>
 
+    <bean id="employeeContainer" class="com.learn.spring.containers.EmployeeContainer">
+        <property name="lists">
+            <list>
+                <value>Donald Trump</value>
+                <value>Barack Obama</value>
+                <value>George Bush</value>
+            </list>
+        </property>
+        <property name="sets">
+            <set>
+                <value>Emmanuel Macron</value>
+                <value>Emmanuel Macron</value>
+                <value>Francois Hollande</value>
+            </set>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="Johnson" value="Boris" />
+                <entry key="May" value="Theresa" />
+                <entry key="Cameron" value="David" />
+            </map>
+        </property>
+    </bean>
+
 </beans>
 
 
