@@ -13,17 +13,21 @@
 
 
     <bean id="employeeDao" class="com.learn.spring.dao.impl.EmployeeDaoImpl">
-        <property name="employee" ref="employee" />
+        <property name="employee1" ref="employeeBeen1" />
+        <property name="employee2" ref="employeeBeen2" />
     </bean>
 
-
-    <bean id="employee" class="com.learn.spring.model.Employee" >
+    <bean id="employeeBeen1" class="com.learn.spring.model.Employee" >
         <constructor-arg value="31"  index="1" type="int"/>
         <constructor-arg value="true" index="2" type="boolean"/>
         <constructor-arg value="Ravi Kant Soni" index="0" type="String" />
     </bean>
 
-
+    <bean id="employeeBeen2" class="com.learn.spring.model.Employee" >
+        <constructor-arg value="John Thomson" />
+        <constructor-arg value="55" />
+        <constructor-arg value="true"/>
+    </bean>
 
 </beans>
 
