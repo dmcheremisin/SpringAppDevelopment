@@ -1,0 +1,14 @@
+package com.learn.spring;
+
+import com.learn.spring.service.EmployeeService;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+    public static void main(String[] args) {
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+        EmployeeService employeeService = ctx.getBean("employeeService", EmployeeService.class);
+        System.out.println(employeeService.generateEmployeeId()); // 66b082e1-61ff-4b4a-8384-cfa77b51091a
+    }
+
+}
