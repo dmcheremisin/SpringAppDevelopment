@@ -29,8 +29,11 @@ public class Main {
         ATM atm = (ATM) ctx.getBean("com.learn.spring.atm.ATM");
         atm.printBalance("123"); // Account balance is 0.0 for account number = 123
 
-        Worker russianWorker = ctx.getBean("realRussianWorker", Worker.class);
-        System.out.println(russianWorker); //Worker(id=333, name=Vasilii Ivanov, country=Russia)
+        Worker russianWorker = ctx.getBean("russianWorker", Worker.class);
+        System.out.println(russianWorker); //Worker(id=0, name=null, country=Russia)
+
+        Worker realRussianWorker = ctx.getBean("realRussianWorker", Worker.class);
+        System.out.println(realRussianWorker); //Worker(id=333, name=Vasilii Ivanov, country=Russia)
     }
 
 }
