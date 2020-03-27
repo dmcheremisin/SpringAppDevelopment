@@ -26,7 +26,7 @@ public class Main {
         System.out.println(employeeContainer.getSets()); // [Emmanuel Macron, Francois Hollande]
         System.out.println(employeeContainer.getMaps()); // {Johnson=Boris, May=Theresa, Cameron=David}
 
-        ATM atm = (ATM) ctx.getBean("com.learn.spring.atm.ATM");
+        ATM atm = (ATM) ctx.getBean("com.learn.spring.innerBeanXml.ATM");
         atm.printBalance("123"); // Account balance is 0.0 for account number = 123
 
         Worker russianWorker = ctx.getBean("russianWorker", Worker.class);
@@ -34,6 +34,12 @@ public class Main {
 
         Worker realRussianWorker = ctx.getBean("realRussianWorker", Worker.class);
         System.out.println(realRussianWorker); //Worker(id=333, name=Vasilii Ivanov, country=Russia)
+
+//        Worker abstractWorker = ctx.getBean("abstractWorker", Worker.class); Error creating bean with name 'abstractWorker':
+//        Bean definition is abstract
+
+        Worker implRussianWorker = ctx.getBean("implRussianWorker", Worker.class);
+        System.out.println(implRussianWorker); //Worker(id=444, name=Fedor Petrov, country=Russia)
     }
 
 }

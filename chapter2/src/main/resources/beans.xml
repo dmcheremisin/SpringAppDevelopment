@@ -71,6 +71,15 @@
         <property name="name" value="Vasilii Ivanov" />
     </bean>
 
+    <bean id="abstractWorker" class="com.learn.spring.inheritance.Worker" abstract="true">
+        <property name="country" value="Russia" />
+    </bean>
+
+    <bean id="implRussianWorker" parent="abstractWorker" >
+        <property name="id" value="444" />
+        <property name="name" value="Fedor Petrov" />
+    </bean>
+
 </beans>
 
 
