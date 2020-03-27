@@ -3,6 +3,7 @@ package com.learn.spring;
 import com.learn.spring.atm.ATM;
 import com.learn.spring.containers.EmployeeContainer;
 import com.learn.spring.dao.EmployeeDao;
+import com.learn.spring.inheritance.Worker;
 import com.learn.spring.service.EmployeeService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -27,6 +28,9 @@ public class Main {
 
         ATM atm = (ATM) ctx.getBean("com.learn.spring.atm.ATM");
         atm.printBalance("123"); // Account balance is 0.0 for account number = 123
+
+        Worker russianWorker = ctx.getBean("realRussianWorker", Worker.class);
+        System.out.println(russianWorker); //Worker(id=333, name=Vasilii Ivanov, country=Russia)
     }
 
 }

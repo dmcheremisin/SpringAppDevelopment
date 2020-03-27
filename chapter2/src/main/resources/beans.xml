@@ -62,6 +62,15 @@
         </property>
     </bean>
 
+    <bean id="russianWorker" class="com.learn.spring.inheritance.Worker">
+        <property name="country" value="Russia" />
+    </bean>
+
+    <bean id="realRussianWorker" parent="russianWorker" >
+        <property name="id" value="333" />
+        <property name="name" value="Vasilii Ivanov" />
+    </bean>
+
 </beans>
 
 
