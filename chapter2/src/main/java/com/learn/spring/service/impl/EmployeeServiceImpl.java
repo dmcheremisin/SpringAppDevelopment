@@ -1,6 +1,7 @@
 package com.learn.spring.service.impl;
 
 import com.learn.spring.dao.EmployeeDao;
+import com.learn.spring.model.Employee;
 import com.learn.spring.service.EmployeeService;
 
 import java.util.UUID;
@@ -19,7 +20,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public String getEmployeeFromDb() {
+    public Employee getEmployeeFromDb() {
         return employeeDao.getEmployeeFromDb();
     }
 }

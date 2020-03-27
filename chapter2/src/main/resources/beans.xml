@@ -12,7 +12,16 @@
     </bean>
 
 
-    <bean id="employeeDao" class="com.learn.spring.dao.impl.EmployeeDaoImpl" />
+    <bean id="employeeDao" class="com.learn.spring.dao.impl.EmployeeDaoImpl">
+        <property name="employee" ref="employee" />
+    </bean>
+
+
+    <bean id="employee" class="com.learn.spring.model.Employee" >
+        <constructor-arg value="Ravi Kant Soni" />
+        <constructor-arg value="31" />
+        <constructor-arg value="true"/>
+    </bean>
 
 
 
