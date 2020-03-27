@@ -54,6 +54,14 @@
         </property>
     </bean>
 
+    <bean class="com.learn.spring.atm.ATM" >
+        <property name="printer" >
+            <bean class="com.learn.spring.atm.Printer">
+                <property name="message" value="Account balance is 0.0 for account number = " />
+            </bean>
+        </property>
+    </bean>
+
 </beans>
 
 

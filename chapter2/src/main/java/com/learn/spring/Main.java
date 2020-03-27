@@ -1,5 +1,6 @@
 package com.learn.spring;
 
+import com.learn.spring.atm.ATM;
 import com.learn.spring.containers.EmployeeContainer;
 import com.learn.spring.dao.EmployeeDao;
 import com.learn.spring.service.EmployeeService;
@@ -23,6 +24,9 @@ public class Main {
         System.out.println(employeeContainer.getLists()); // [Donald Trump, Barack Obama, George Bush]
         System.out.println(employeeContainer.getSets()); // [Emmanuel Macron, Francois Hollande]
         System.out.println(employeeContainer.getMaps()); // {Johnson=Boris, May=Theresa, Cameron=David}
+
+        ATM atm = (ATM) ctx.getBean("com.learn.spring.atm.ATM");
+        atm.printBalance("123"); // Account balance is 0.0 for account number = 123
     }
 
 }
