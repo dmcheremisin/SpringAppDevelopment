@@ -30,7 +30,7 @@
         <constructor-arg value="true"/>
     </bean>
 
-    <bean id="employeeContainer" class="com.learn.spring.containers.EmployeeContainer">
+    <bean id="employeeContainer" class="com.learn.spring.collections.EmployeeContainer">
         <property name="lists">
             <list>
                 <value>Donald Trump</value>
@@ -54,9 +54,9 @@
         </property>
     </bean>
 
-    <bean class="com.learn.spring.atm.ATM" >
+    <bean class="com.learn.spring.innerBeanXml.ATM" >
         <property name="printer" >
-            <bean class="com.learn.spring.atm.Printer">
+            <bean class="com.learn.spring.innerBeanXml.Printer">
                 <property name="message" value="Account balance is 0.0 for account number = " />
             </bean>
         </property>

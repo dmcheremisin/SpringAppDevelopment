@@ -1,7 +1,7 @@
 package com.learn.spring;
 
-import com.learn.spring.atm.ATM;
-import com.learn.spring.containers.EmployeeContainer;
+import com.learn.spring.innerBeanXml.ATM;
+import com.learn.spring.collections.EmployeeContainer;
 import com.learn.spring.dao.EmployeeDao;
 import com.learn.spring.inheritance.Worker;
 import com.learn.spring.service.EmployeeService;

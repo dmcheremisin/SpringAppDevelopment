@@ -1,4 +1,4 @@
-package com.learn.spring.containers;
+package com.learn.spring.collections;
 
 import lombok.Getter;
 import lombok.Setter;

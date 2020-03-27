@@ -1,4 +1,4 @@
-package com.learn.spring.atm;
+package com.learn.spring.innerBeanXml;
 
 import lombok.Getter;
 import lombok.Setter;
