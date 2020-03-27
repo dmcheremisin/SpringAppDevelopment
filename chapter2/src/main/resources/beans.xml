@@ -7,7 +7,14 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="employeeService" class="com.learn.spring.service.impl.EmployeeServiceImpl" />
+    <bean id="employeeService" class="com.learn.spring.service.impl.EmployeeServiceImpl" >
+        <constructor-arg ref="employeeDao" />
+    </bean>
+
+
+    <bean id="employeeDao" class="com.learn.spring.dao.impl.EmployeeDaoImpl" />
+
+
 
 </beans>
 

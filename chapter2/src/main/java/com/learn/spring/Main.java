@@ -7,8 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+
         EmployeeService employeeService = ctx.getBean("employeeService", EmployeeService.class);
         System.out.println(employeeService.generateEmployeeId()); // 66b082e1-61ff-4b4a-8384-cfa77b51091a
+
+        System.out.println(employeeService.getEmployeeFromDb()); // Employee {id=1, name='Mister Fromm Db'}
     }
 
 }

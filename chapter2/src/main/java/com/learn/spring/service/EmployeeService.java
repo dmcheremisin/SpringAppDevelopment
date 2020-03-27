@@ -6,4 +6,6 @@ public interface EmployeeService {
 
     UUID generateEmployeeId();
 
+    String getEmployeeFromDb();
+
 }
