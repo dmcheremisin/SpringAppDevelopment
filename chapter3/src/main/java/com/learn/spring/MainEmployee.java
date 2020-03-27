@@ -4,7 +4,7 @@ import com.learn.spring.dao.EmployeeDao;
 import com.learn.spring.entity.Employee;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class MainEmployee {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
@@ -12,23 +12,17 @@ public class Main {
         EmployeeDao dao = ctx.getBean(EmployeeDao.class);
 
         System.out.println(">>> Before insert");
-
         dao.getEmployees().forEach(System.out::println);
-
         System.out.println(" ======================== ");
 
         System.out.println(">>> Get employee by id: ");
-
         System.out.println(dao.getEmployeeById(1));
-
         System.out.println(" ======================== ");
 
         dao.insertEmployee(new Employee(null, "Anna"));
 
         System.out.println(">>> After insert");
-
         dao.getEmployees().forEach(System.out::println);
-
         System.out.println(" ======================== ");
     }
 

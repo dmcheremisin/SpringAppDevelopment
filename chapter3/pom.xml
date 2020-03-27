@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter3-jdbc</artifactId>
+    <artifactId>chapter3</artifactId>
 
     <dependencies>
         <dependency>
