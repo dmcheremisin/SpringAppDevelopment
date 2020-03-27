@@ -15,6 +15,7 @@
     <bean id="employeeDao" class="com.learn.spring.dao.impl.EmployeeDaoImpl">
         <property name="employee1" ref="employeeBeen1" />
         <property name="employee2" ref="employeeBeen2" />
+        <property name="type" value="Stub Dao Impl" />
     </bean>
 
     <bean id="employeeBeen1" class="com.learn.spring.model.Employee" >

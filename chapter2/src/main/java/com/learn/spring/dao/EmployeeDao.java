@@ -6,4 +6,8 @@ public interface EmployeeDao {
 
     Employee getEmployeeFromDb();
 
+    Employee getEmployee2();
+
+    String getType();
+
 }

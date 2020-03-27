@@ -8,6 +8,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
     private Employee employee1;
     private Employee employee2;
 
+    private String type;
+
     @Override
     public Employee getEmployeeFromDb() {
         return employee1;
@@ -27,5 +29,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     public void setEmployee2(Employee employee2) {
         this.employee2 = employee2;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
