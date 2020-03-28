@@ -4,3 +4,4 @@
 ## Chapter 1 introduction
 ## Chapter 2 Inversion of Control in Spring
 ## Chapter 3 DAO and JDBC
+## Chapter 4 Spring and Hibernate
