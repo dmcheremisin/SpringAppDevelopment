@@ -25,6 +25,18 @@ public class Main {
         System.out.println(">>> After insert");
         employeeService.getAllEmployees().forEach(System.out::println);
         System.out.println(" ======================== ");
+
+        System.out.println(">>> Employee by id: ");
+        System.out.println(employeeService.getEmployeeById(2));
+        System.out.println(" ======================== ");
+
+        System.out.println(">>> Delete employee by id: ");
+        employeeService.deleteEmployeeById(1);
+        System.out.println(" ======================== ");
+
+        System.out.println(">>> After delete");
+        employeeService.getAllEmployees().forEach(System.out::println);
+        System.out.println(" ======================== ");
     }
 
     //>>> Before insert
@@ -39,5 +51,16 @@ public class Main {
     //Employee(id=2, firstName=Irina, lastName=Cheremisina, jobTitle=CEO, department=Administration, salary=200000)
     //Employee(id=3, firstName=Vasya, lastName=Pupkin, jobTitle=Cleaner, department=Office stuff, salary=40000)
     // ========================
+    //>>> Employee by id:
+    //Hibernate: select employee0_.id as id1_0_, employee0_.department as departme2_0_, employee0_.first_name as first_na3_0_, employee0_.job_title as job_titl4_0_, employee0_.last_name as last_nam5_0_, employee0_.salary as salary6_0_ from employee employee0_ where employee0_.id=?
+    //Employee(id=2, firstName=Irina, lastName=Cheremisina, jobTitle=CEO, department=Administration, salary=200000)
+    // ========================
+    //>>> Delete employee by id:
+    //Hibernate: delete from employee where id=?
+    // ========================
+    //>>> After delete
+    //Hibernate: select employee0_.id as id1_0_, employee0_.department as departme2_0_, employee0_.first_name as first_na3_0_, employee0_.job_title as job_titl4_0_, employee0_.last_name as last_nam5_0_, employee0_.salary as salary6_0_ from employee employee0_
+    //Employee(id=2, firstName=Irina, lastName=Cheremisina, jobTitle=CEO, department=Administration, salary=200000)
+    //Employee(id=3, firstName=Vasya, lastName=Pupkin, jobTitle=Cleaner, department=Office stuff, salary=40000)
 
 }

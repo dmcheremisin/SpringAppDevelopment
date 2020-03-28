@@ -10,4 +10,8 @@ public interface EmployeeService {
 
     void insertEmployee(Employee employee);
 
+    Employee getEmployeeById(Integer id);
+
+    void deleteEmployeeById(Integer id);
+
 }
