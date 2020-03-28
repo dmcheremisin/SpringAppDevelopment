@@ -20,7 +20,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("FROM Employee");
@@ -29,7 +28,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    @Transactional
     public void insertEmployee(Employee employee) {
         employee.setId(null);
         Session session = sessionFactory.openSession();
