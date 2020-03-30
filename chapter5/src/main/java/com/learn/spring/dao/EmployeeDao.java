@@ -14,4 +14,5 @@ public interface EmployeeDao {
 
     void deleteEmployeeById(Integer id);
 
+    void updateEmployee(Employee employee);
 }

@@ -34,7 +34,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public void insertEmployee(Employee employee) {
         employee.setId(null);
-        Session session = sessionFactory.openSession();
+        Session session = sessionFactory.getCurrentSession();
         session.save(employee);
     }
 
@@ -44,5 +44,11 @@ public class EmployeeDaoImpl implements EmployeeDao {
         Query query = session.createQuery("DELETE FROM Employee E WHERE E.id = :id");
         query.setParameter("id", id);
         query.executeUpdate();
+    }
+
+    @Override
+    public void updateEmployee(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(employee);
     }
 }

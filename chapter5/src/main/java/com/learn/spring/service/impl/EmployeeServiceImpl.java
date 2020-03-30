@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
 
@@ -22,7 +23,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    @Transactional
     public void insertEmployee(Employee employee) {
         employeeDao.insertEmployee(employee);
     }
@@ -34,8 +34,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    @Transactional
     public void deleteEmployeeById(Integer id) {
         employeeDao.deleteEmployeeById(id);
+    }
+
+    @Override
+    public void updateEmployee(Employee employee) {
+        employeeDao.updateEmployee(employee);
     }
 }
