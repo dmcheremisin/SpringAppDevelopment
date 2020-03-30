@@ -15,15 +15,21 @@
             <th>Job Title</th>
             <th>Department</th>
             <th>Salary</th>
+            <th>Details</th>
         </tr>
         <c:forEach var="employee" items="${employees}" varStatus="status">
             <tr bgcolor="lightyellow">
-                <td><b>${status.index + 1}</b></td>
+                <td>
+                    <b>${status.index + 1}</b>
+                </td>
                 <td>${employee.firstName}</td>
                 <td>${employee.lastName}</td>
                 <td>${employee.jobTitle}</td>
                 <td>${employee.department}</td>
                 <td>${employee.salary}</td>
+                <td>
+                    <a href="${pageContext.request.contextPath}/employee/${employee.id}">Link</a>
+                </td>
             </tr>
         </c:forEach>
     </table>
