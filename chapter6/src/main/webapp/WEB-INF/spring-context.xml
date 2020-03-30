@@ -20,7 +20,7 @@
 
     <mvc:annotation-driven />
 
-    <context:property-placeholder location="hibernate.properties,jdbc.properties"/>
+    <context:property-placeholder location="db.properties"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}" />
