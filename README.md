@@ -6,5 +6,6 @@
 ## Chapter 3 DAO and JDBC
 ## Chapter 4 Spring and Hibernate
 ## Chapter 5 SpringMvc and Hibernate
-## Chapter 6 SpringMvc & Security & Hibernate
-password fun123
+## Chapter 6 SpringMvc & Security & Hibernate  
+Password for mary and john: fun123  
+## Chapter 7 Spring Unit and Integration Tests
