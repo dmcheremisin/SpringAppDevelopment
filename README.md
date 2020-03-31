@@ -9,3 +9,4 @@
 ## Chapter 6 SpringMvc & Security & Hibernate  
 Password for mary and john: fun123  
 ## Chapter 7 Spring Unit and Integration Tests
+## Chapter 8 Spring AOP and Logging
